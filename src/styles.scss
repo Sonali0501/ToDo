@@ -1,0 +1,103 @@
+$color-1: #66CDAA;
+$color-2: #f5f5ef;
+$white: #ffffff;
+$gray: #606060;
+$dark-gray: #b9b8b8;
+
+html{
+    background-color: $color-2;
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 97vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    .container{
+        height: 90%;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: linear-gradient(to bottom,$color-1 40%, $white 40% 60%);
+        border-radius: 10px;
+        width: 90%;
+        box-shadow: 0 2px 10px 0 rgba(0,0,0,0.15) !important;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        .btn{
+            position:absolute;
+            top: 20px;
+            right: 20px;
+            width: fit-content;
+            padding: 5px 12px;
+            background-color: $white;
+            color: $color-1;
+            font-size: 16px;
+            font-weight: 600;
+            outline: none;
+            border: none;
+            border-radius: 3px;
+            box-shadow: 0 1px 5px 0 rgba(0,0,0,0.1) !important;        
+        }
+
+        .head{
+            color: $white;
+            display: flex;
+            height: 150px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            .card{
+                background-color: $color-2;
+                width: 25%;
+                border-radius: 5px;
+                box-shadow: 0 1px 5px 0 rgba(0,0,0,0.1) !important;
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 30px;
+                gap: 20px;
+                
+                .card-title{
+                    font-weight: 700;
+                    color: $color-1;
+                    
+                }
+
+                .items{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 10px;    
+                    .item{
+                        align-self: center;
+                        background-color: $white;
+                        box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1) !important;
+                        border: 1px solid $dark-gray;
+                        margin: 0px;
+                        width: 85%;
+                        font-weight: 500;
+                        color: $gray;
+                        font-size: 18px;
+                        border-radius: 5px;
+                        padding: 5px 0px;
+
+                        &.done{
+                            background-color: $dark-gray;
+                        }
+                    }
+                }
+
+                
+            }
+        }
+    }
+}

@@ -1,14 +1,25 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import '../styles.scss';
+import Card from './Card';
+import Button from './Button';
 
 class App extends React.Component {
+
     render() {
-        console.log("ToDo :",this.props.Todo);
-        console.log("InProgress :",this.props.InProgress);
-        console.log("Done :",this.props.Done);
         return(
-            <div>
-                A Simple ToDo App...!
+            <div className="body">
+            <div className="container">
+                <Button />
+                <div className="head">
+                    <h1>Task Manager</h1>
+                </div>
+                <div className="content">
+                <Card title="To Do" data={this.props.Todo} />
+                <Card title="In Progress" data={this.props.InProgress} />
+                <Card title="Done" data={this.props.Done} />
+                </div>
+            </div>
             </div>
         );
     }
