@@ -1,18 +1,28 @@
 import { combineReducers } from 'redux';
-import { ToDo, InProgress, Done } from '../DummyData';
 
-const getTodoData = () => {
-    return ToDo;
+const initalState = {
+    Data : {
+        Done: [
+            { task: "Book the table"},
+            { task: "Buy the suitcase"}
+        ],
+        InProgress: [
+            { task: "Complete work report"},
+            { task: "Grandpa birthday"}
+        ],
+        ToDo: [
+            { task: "Buy Medicines"},
+            { task: "Go to the dentist"},
+            { task: "Do shopping"},
+            { task: "Call to the car service"}
+        ]
+    }
 }
-const getInProgressData = () => {
-    return InProgress;
-}
-const getDoneData = () => {
-    return Done;
+
+const getData = () => {
+    return initalState.Data;
 }
 
 export default combineReducers({
-    Todo: getTodoData,
-    InProgress: getInProgressData,
-    Done: getDoneData
+    Data: getData
 });

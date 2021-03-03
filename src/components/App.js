@@ -15,9 +15,9 @@ class App extends React.Component {
                     <h1>Task Manager</h1>
                 </div>
                 <div className="content">
-                <Card title="To Do" data={this.props.Todo} />
-                <Card title="In Progress" data={this.props.InProgress} />
-                <Card title="Done" data={this.props.Done} />
+                <Card title="To Do" data={this.props.Data.ToDo} />
+                <Card title="In Progress" data={this.props.Data.InProgress} />
+                <Card title="Done" data={this.props.Data.Done} />
                 </div>
             </div>
             </div>
@@ -27,9 +27,7 @@ class App extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        Todo: state.Todo,
-        InProgress: state.InProgress,
-        Done: state.Done
+        Data: state.Data
     };  
 }
 
